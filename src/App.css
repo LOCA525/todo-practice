@@ -71,6 +71,17 @@ button {
   font-size: 40px;
   padding-bottom: 30px;
 }
+.editBox {
+  width: 288px;
+  text-align: center;
+  height: 50px;
+  border: #282c34 1px solid;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 10px;
+  position: relative;
+}
 .todoList {
   text-align: center;
   height: 50px;
@@ -110,4 +121,8 @@ button {
   top: 7px;
   right: 10px;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
