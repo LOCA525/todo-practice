@@ -9,16 +9,18 @@ function App() {
   const id = useRef(0);
 
   const [todoData, setTododata] = useState([]);
-  const [sw, setSw] = useState(true);
+
   // () => {
   //   return JSON.parse(localStorage.getItem("todoData")) || [];
   // }
 
   const handleSubmit = (userValue) => {
-    const nextTodoData = [...todoData, { content: userValue, id: id.current }];
-    setTododata(nextTodoData);
+    if (userValue !== "") {
+      const nextTodoData = [...todoData, { content: userValue, id: id.current }];
+      setTododata(nextTodoData);
+      id.current = id.current + 1;
+    }
     // localStorage.setItem("todoData", JSON.stringify(nextTodoData));
-    id.current = id.current + 1;
   };
 
   return (
